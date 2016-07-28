@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
-    <title>browserify_simple</title>
+    <title>Webpack Single Page App</title>
+    <link rel="stylesheet" href="/static/normalize.css" />
+    <!-- webpack でコンポーネントローカルでCSSを読むやり方がよくわからなかったので､ここでとりあえず読む -->
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
   </head>
   <body>
-    <app></app>
-    <script src="dist/build.js"></script>
+  	<div id="app"></div>
+    <!-- built files will be auto injected -->
+
+    <script src="./dist/build.js"></script>
   </body>
 </html>
