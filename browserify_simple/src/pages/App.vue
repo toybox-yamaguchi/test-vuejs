@@ -12,6 +12,7 @@
 <script>
   import store from '../vuex/store'
   import HeaderBar from '../components/HeaderBar.vue'
+
   //
   export default {
     store, // == store: store
