@@ -16,6 +16,9 @@ var path = {
   js:{}
 };
 
+/**
+ * 外部CSSプラグイン
+ */
 gulp.task('sass', function(){
   gulp.src(path.css.src + '/*.scss')
     .pipe(sass({
@@ -30,6 +33,9 @@ gulp.task('css_vendor', function(){
     .pipe(gulp.dest(path.css.dest));
 });
 
+/**
+ * vue
+ */
 gulp.task('vue', function(){
   browserify('./src/main.js')
     .bundle()
@@ -37,6 +43,9 @@ gulp.task('vue', function(){
     .pipe(gulp.dest('./js'))
 });
 
+/**
+ * gulp watch
+ */
 gulp.task('watch', ['sass', 'css_vendor'], function(){
   gulp.watch(path.css.src + '/*.scss', ['sass']);
 });
