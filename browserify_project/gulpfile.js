@@ -19,10 +19,7 @@ var path = {
 gulp.task('sass', function(){
   gulp.src(path.css.src + '/*.scss')
     .pipe(sass({
-      outputStyle:'compressed',
-      includePaths:[
-        path.css.src
-      ]
+      outputStyle:'compressed'
     }))
     .pipe(gulp.dest(path.css.dest));
 });
@@ -38,4 +35,8 @@ gulp.task('vue', function(){
     .bundle()
     .pipe(source('build.js'))
     .pipe(gulp.dest('./js'))
+});
+
+gulp.task('watch', ['sass', 'css_vendor'], function(){
+  gulp.watch(path.css.src + '/*.scss', ['sass']);
 });
