@@ -1,0 +1,29 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = crlf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{php,html}]
+indent_size = 0
+
+[*.json]
+indent_size = 2
+end_of_line = lf
+
+[doc/**]
+end_of_line = lf
+
+[frontend_src/**]
+indent_size = 2
+end_of_line = lf
+
+[frontend_src/**/*.{php,html,ect}]
+indent_size = 0
